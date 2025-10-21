@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Cam's Web Page</title>
+  </head>
+
+  <body>
+	<style>
+	    body {
+	        background-color: lightblue;
+	        font-family: "Comic Sans MS", "Comic Neue", sans-serif;
+            color: #003366;
+	    }
+        #centered {
+            text-align: center;
+        }
+        #left {
+            text-align: left;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+    <div id = "centered">
+    	<h1>🐧 Camilla Calderon's Web Page 🐧</h1>
+    	<p> Finding an unblocked IDE to code this was very difficult</p>
+    	<p> Anyways, welcome to my Web Page!</p>
+    	<hr>
+    	<p><strong>Arent penguins so cute?</strong></p>
+    	<a href="https://en.wikipedia.org/wiki/Penguins">
+    	    
+    	<img 
+    	src = "https://upload.wikimedia.org/wikipedia/commons/a/a3/Aptenodytes_forsteri_-Snow_Hill_Island%2C_Antarctica_-adults_and_juvenile-8.jpg " 
+    	alt = "penguins!">
+    	</a>
+    	
+    	<hr>
+    	<p> if I had to choose other animals that could compete with penguins on the cuteness scale I'd choose:</p>
+    </div>
+    <div id = "left">
+    	<ul>
+    	    <li><a href="https://en.wikipedia.org/wiki/Seals">Seals</a></li>
+    	    <li><a href="https://en.wikipedia.org/wiki/Kitten">Kittens</a></li>
+    	    <li><a href="https://en.wikipedia.org/wiki/Bear">& Bear Cubs</a></li>
+    	</ul>
+    	<hr>
+    </div>
+    <div id = "centered">
+        <h2> Animal Facts Corner</h2>
+        <table>
+          <tr>
+            <th>Animal</th>
+            <th>Habitat</th>
+            <th>Favorite food</th>
+          </tr>
+          <tr>
+            <td>Penguin</td>
+            <td>Antartica</td>
+            <td>Fish and Krill</td>
+          </tr>
+          <tr>
+            <td>Seals</td>
+            <td>Coastal Ocean</td>
+            <td>Fish and Squid</td>
+          </tr>
+          <tr>
+            <td>Kittens</td>
+            <td>Everywhere humans are</td>
+            <td>Treats</td>
+          </tr>
+          <tr>
+            <td>Bears</td>
+            <td>Forests and Mountains</td>
+            <td>Fish, Berries, and Honey</td>
+          </tr>
+        </table>
+        
+    </div>
+    <form 
+       action="/post"
+       method="post"
+       onsubmit="formValidation(event)">
+        <h1>Did you Like my Site? </h1>
+        Yes or No: <input type="text" name="validation">
+        <input 
+            type="submit"
+            value="Submit">
+    </form>
+    <script>
+        function formValidation(event) {
+            event
+            .preventDefault();
+            let name = event
+            .target
+            .validation            
+            if( name.length == 0){
+                alert("Enter Valid Name");
+                return false;
+            }
+            alert ("Form Submitted")
+        }
+        </script>
+
+
+  </body>
+</html>
